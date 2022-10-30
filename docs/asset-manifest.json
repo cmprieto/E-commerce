@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.js": "/E-commerce/static/js/main.456ffcf7.js",
+    "static/media/coderhouse-logo.png": "/E-commerce/static/media/coderhouse-logo.66eea2b37f600cdffb44.png",
+    "static/media/cart-outline.svg": "/E-commerce/static/media/cart-outline.ec34e04f278866298777c9836305a693.svg",
+    "index.html": "/E-commerce/index.html",
+    "main.456ffcf7.js.map": "/E-commerce/static/js/main.456ffcf7.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.456ffcf7.js"
+  ]
+}
