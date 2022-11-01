@@ -60,3 +60,86 @@ export const Btn = styled.button`
 export const Container = styled.div`
   margin: 50px;
 `;
+
+// ITEM COUNT
+
+export const FormGroup = styled.div`
+  width: 300px;
+  height: auto;
+  margin: 10px auto;
+  text-align: center;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const Label = styled.label`
+  font-size: 0.85rem;
+  color: #4682b4;
+`;
+
+export const Contador = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  background-color: transparent
+  width: auto;
+  height: auto;
+  margin: 0.7rem;
+`;
+
+export const Btn2 = styled.button`
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0.5rem;
+  background-color: white;
+  color: #4682b4;
+  border-radius: 15px;
+  border: 1px solid black;
+  &:hover {
+    background-color: #f0f0f0;
+  }
+`;
+
+export const Button = styled.button`
+  background-color: white;
+  color: #4682b4;
+  font-size: 0.8rem;
+  border: 1px solid black;
+  cursor: pointer;
+  margin: 0.5rem;
+  width: 8rem;
+  height: 2rem;
+  border-radius: 5px;
+  &:hover {
+    background-color: #f0f0f0;
+  }
+  &:active {
+    border: 2px solid black;
+  }
+`;
+
+export const Input = styled.input`
+  border: none;
+  width: 50px;
+  padding: 0.5rem;
+  border-radius: 5px;
+  text-align: center;
+  &:hover {
+    background-color: #f0f0f0;
+  }
+  &:focus {
+    border: 1px solid #8842d5;
+  }
+`;
+
+export const Form = styled.form`
+  background-color: white;
+`;
+
+export const P = styled.p`
+  color: #7b241c;
+  font-size: 0.8rem;
+`;
