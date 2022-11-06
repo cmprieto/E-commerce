@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "Estambul",
+    "description": "Bazar",
+    "price": "25€",
+    "pictureUrl": "https://carlosprieto.org/wp-content/uploads/2019/11/TalesofTono.jpg"
+  },
+    {
+    "id": 2,
+    "title": "Jerusalem",
+    "description": "Old City",
+    "price": "45€",
+    "pictureUrl": "https://www.instagram.com/p/CibHAHoIbY_/"
+  },
+      {
+    "id": 3,
+    "title": "Barcelona",
+    "description": "Raval",
+    "price": "25€",
+    "pictureUrl": "https://www.instagram.com/p/CibHAHoIbY_/"
+  }
+]

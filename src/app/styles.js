@@ -1,12 +1,22 @@
 import styled, { createGlobalStyle } from "styled-components";
+import PTSans from "../fonts/PTN77F.ttf";
 
 const desktopStartWidth = 700;
 const mobile = `@media (max-width: ${desktopStartWidth}px)`;
 
 export const GlobalStyle = createGlobalStyle`
-	body {
-		background-color: #F0F0F0;
-	}
+
+  @font-face {
+   font-family: 'PTSans';
+   src: url(${PTSans});
+  }
+  * {
+      
+      font-family: 'PTSans';
+    } 
+    body{
+        background-color: #F0F0F0;
+    }
 `;
 
 export const NavBar = styled.div`
@@ -61,10 +71,14 @@ export const Container = styled.div`
   margin: 50px;
 `;
 
+export const Icon = styled.img`
+  width: 2rem;
+`;
+
 // ITEM COUNT
 
 export const FormGroup = styled.div`
-  width: 300px;
+  width: 300px auto;
   height: auto;
   margin: 10px auto;
   text-align: center;
@@ -84,7 +98,7 @@ export const Contador = styled.div`
   align-items: center;
   flex-direction: row;
   justify-content: center;
-  background-color: transparent
+  background-color: transparent;
   width: auto;
   height: auto;
   margin: 0.7rem;
@@ -141,5 +155,20 @@ export const Form = styled.form`
 
 export const P = styled.p`
   color: #7b241c;
-  font-size: 0.8rem;
+  font-size: 1rem;
+`;
+
+//
+export const ItemListStyle = styled.div`
+  margin: 2rem auto;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+`;
+
+export const ItemStyle = styled.div`
+  margin: 2rem;
+  padding: 2rem;
+  background-color: #f0f0f0;
 `;
