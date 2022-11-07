@@ -8,7 +8,7 @@ const ItemList = (props) => {
       <P>ItemList</P>
       <ItemListStyle>
         {props.valorQuePaso.map((item, i) => (
-          <Item data={item} key={i}></Item>
+          <Item data={item} key={i} />
         ))}
       </ItemListStyle>
     </div>

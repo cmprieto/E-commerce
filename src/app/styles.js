@@ -68,7 +68,7 @@ export const Btn = styled.button`
 `;
 
 export const Container = styled.div`
-  margin: 50px;
+  margin: 2rem;
 `;
 
 export const Icon = styled.img`
@@ -170,5 +170,22 @@ export const ItemListStyle = styled.div`
 export const ItemStyle = styled.div`
   margin: 2rem;
   padding: 2rem;
+  background-color: #f0f0f0;
+`;
+
+export const ItemDetailContainerStyle = styled.div`
+  margin: 2rem;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: flex-start;
+`;
+
+export const ItemDetailStyle = styled.div`
+  margin: 2rem;
+  padding: 2rem;
+  justify-content: flex-start;
+  flex-direction: row;
   background-color: #f0f0f0;
 `;
