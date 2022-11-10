@@ -20,7 +20,7 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 export const NavBar = styled.div`
-  background-color: white;
+  background-color: black;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -50,15 +50,19 @@ export const Btn = styled.button`
   /*   width: 70px;
   height: 35px; */
   border-radius: 5px;
-  /*  margin: 0.5em; */
+  margin: 0.5em;
   background-color: white;
   color: black;
   font-size: 0.8rem;
   border: 1px solid black;
   cursor: pointer;
-  margin: 0.5rem;
+
   &:hover {
     background-color: #f0f0f0;
+  }
+  &:active {
+    background-color: #f1b009;
+    color: white;
   }
   ${mobile} {
     width: 5rem;
@@ -69,6 +73,7 @@ export const Btn = styled.button`
 
 export const Container = styled.div`
   margin: 2rem;
+  background-color: #f1b009;
 `;
 
 export const Icon = styled.img`
@@ -123,15 +128,13 @@ export const Button = styled.button`
   font-size: 0.8rem;
   border: 1px solid black;
   cursor: pointer;
-  margin: 0.5rem;
+  margin: 0;
+  padding: 0;
   width: 8rem;
   height: 2rem;
   border-radius: 5px;
   &:hover {
     background-color: #f0f0f0;
-  }
-  &:active {
-    border: 2px solid black;
   }
 `;
 
@@ -161,16 +164,46 @@ export const P = styled.p`
 //
 export const ItemListStyle = styled.div`
   margin: 2rem auto;
-  background-color: white;
+  background-color: #f1b009;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: flex-start;
 `;
 
 export const ItemStyle = styled.div`
-  margin: 2rem;
-  padding: 2rem;
-  background-color: #f0f0f0;
+  margin: 1rem;
+  padding: 1rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  justify-content: center;
+  align-content: center;
+`;
+
+export const Button2 = styled.button`
+  background-color: tranparent;
+  color: #4682b4;
+  font-size: 0.8rem;
+  border: 0;
+  border-bottom: 0.5px solid grey;
+  cursor: pointer;
+  width: 8rem;
+  height: 3rem;
+  border-radius: 5px;
+  align-self: center;
+  &:hover {
+    background-color: #f0f0f0;
+  }
+  &:active {
+    border: 2px solid black;
+  }
+`;
+export const Img = styled.div`
+  &:hover {
+    opacity: 0.5;
+  }
 `;
 
 export const ItemDetailContainerStyle = styled.div`
@@ -179,7 +212,7 @@ export const ItemDetailContainerStyle = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
-  justify-content: flex-start;
+  justify-content: center;
 `;
 
 export const ItemDetailStyle = styled.div`
@@ -188,4 +221,5 @@ export const ItemDetailStyle = styled.div`
   justify-content: flex-start;
   flex-direction: row;
   background-color: #f0f0f0;
+  border: 1px solid black;
 `;

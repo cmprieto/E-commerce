@@ -1,11 +1,11 @@
 import React from "react";
 import Item from "./Item";
-import { P, ItemListStyle } from "../app/styles";
+import { ItemListStyle } from "../app/styles";
 
 const ItemList = (props) => {
   return (
     <div>
-      <P>ItemList</P>
+      {/* <P>ItemList</P> */}
       <ItemListStyle>
         {props.valorQuePaso.map((item, i) => (
           <Item data={item} key={i} />

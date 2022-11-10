@@ -52,7 +52,7 @@ const ItemCount = () => {
   return (
     <FormGroup>
       <Form onSubmit={enviarDatos}>
-        <Label>Fotografía</Label>
+        {/* <Label>Fotografía</Label> */}
         <Contador>
           <Btn2 onClick={downValue}>-</Btn2>
           <Input

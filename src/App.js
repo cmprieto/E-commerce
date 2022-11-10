@@ -1,18 +1,11 @@
 import React from "react";
-import ItemListContainer from "./components/ItemListContainer";
-import ItemDetailContainer from "./components/ItemDetailContainer";
-import Navbar from "./components/Navbar";
-import { GlobalStyle } from "./app/styles";
+import Router from "./app/Router";
+import "./app/style.css";
 
 const App = () => {
-  const text = "Welcome";
-
   return (
     <div>
-      <GlobalStyle />
-      <Navbar />
-      <ItemListContainer saludo={text} />
-      <ItemDetailContainer />
+      <Router />
     </div>
   );
 };
