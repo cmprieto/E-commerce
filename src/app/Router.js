@@ -10,13 +10,16 @@ const Router = () => (
     <Routes>
       {/* <Route path={process.env.PUBLIC_URL}> */}
       <Route element={<Layout />}>
-        <Route index element={<Home />} />
-        <Route path="/item/:id" element={<Item />} />
-        <Route path="/category/:id" element={<Category />} />
-        <Route path="/cart/" element={<Cart />} />
+        <Route path={process.env.PUBLIC_URL + "/"} element={<Home />} />
+        <Route path={process.env.PUBLIC_URL + "/item/:id"} element={<Item />} />
+        <Route
+          path={process.env.PUBLIC_URL + "/category/:id"}
+          element={<Category />}
+        />
+        <Route path={process.env.PUBLIC_URL + "/cart/"} element={<Cart />} />
         <Route path="*" element={<div>404</div>} />
       </Route>
-      {/*     </Route> */}
+      {/*  </Route> */}
     </Routes>
   </BrowserRouter>
 );

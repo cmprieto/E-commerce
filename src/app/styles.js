@@ -168,7 +168,7 @@ export const ItemListStyle = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: space-evenly;
 `;
 
 export const ItemStyle = styled.div`

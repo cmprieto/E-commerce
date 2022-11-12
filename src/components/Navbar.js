@@ -9,21 +9,21 @@ const Navbar = () => {
   return (
     <div>
       <NavBar>
-        <Link to="/">
+        <Link to={process.env.PUBLIC_URL + "/"}>
           <img src={foto} alt="logo" width="150" />
         </Link>
         <Menu>
-          <NavLink to="/">
+          <NavLink to={process.env.PUBLIC_URL + "/"}>
             <Btn>HOME</Btn>
           </NavLink>
-          <NavLink to="/category/fotografia">
+          <NavLink to={process.env.PUBLIC_URL + "/category/fotografia"}>
             <Btn>FOTOGRAFIAS</Btn>
           </NavLink>
-          <NavLink to="/category/libros">
+          <NavLink to={process.env.PUBLIC_URL + "/category/libros"}>
             <Btn>FOTOLIBROS</Btn>
           </NavLink>
         </Menu>
-        <Link to="/cart">
+        <Link to={process.env.PUBLIC_URL + "/cart"}>
           <CardWidget />
         </Link>
       </NavBar>
