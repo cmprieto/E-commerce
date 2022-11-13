@@ -1,13 +1,12 @@
-import { ItemDetailStyle, P } from "../app/styles";
+import { ItemDetailStyle, Button, P, UL } from "../app/styles";
 import ItemCount from "./ItemCount";
-import { useParams } from "react-router-dom";
+import { useState } from "react";
+import { Link, useParams } from "react-router-dom";
 
 const ItemDetail = (props) => {
   const userId = useParams();
   let detail = parseInt(userId.id) - 1;
-  /*   useEffect(() => {
-    ide = parseInt(ident);
-  }, []); */
+  const [showItemCount, setShowItemCount] = useState(true);
 
   return (
     <ItemDetailStyle>
@@ -17,20 +16,25 @@ const ItemDetail = (props) => {
         )}
         {console.log("ide" + userId.id)}
       </div>
-
       <div>
         {props.itemAPasar[detail] && (
-          <ul>
+          <UL>
             <h2> {props.itemAPasar[detail].title}</h2>
             <P>
               {props.itemAPasar[detail].description} -
               {props.itemAPasar[detail].price}
             </P>
             <h4>stock: {props.itemAPasar[detail].stock}</h4>
-          </ul>
+          </UL>
         )}
       </div>
-      <ItemCount />
+      {showItemCount ? (
+        <ItemCount datosqueVienendelHijo={(r) => setShowItemCount(r)} />
+      ) : (
+        <Link to={process.env.PUBLIC_URL + "/cart"}>
+          <Button>Terminar mi compra</Button>
+        </Link>
+      )}
     </ItemDetailStyle>
   );
 };

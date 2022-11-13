@@ -42,7 +42,7 @@ const data = [
     description: "Robert Frank",
     price: "35€",
     foto: americanos,
-    category: "libros",
+    category: "fotolibros",
     stock: 12,
   },
   {
@@ -51,7 +51,7 @@ const data = [
     description: "Eggleston",
     price: "235€",
     foto: eggl,
-    category: "libros",
+    category: "fotolibros",
     stock: 7,
   },
   {
@@ -60,7 +60,7 @@ const data = [
     description: "Saul Leiter",
     price: "35€",
     foto: leiter,
-    category: "libros",
+    category: "fotolibros",
     stock: 4,
   },
   {
@@ -87,7 +87,7 @@ const data = [
     description: "Libro de Daido Moriyama",
     price: "25€",
     foto: Tales,
-    category: "libros",
+    category: "fotolibros",
     stock: 8,
   },
 ];

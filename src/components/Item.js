@@ -1,4 +1,4 @@
-import { ItemStyle, P, Button2, Img } from "../app/styles";
+import { ItemStyle, P, Button, Img } from "../app/styles";
 import { Link } from "react-router-dom";
 
 const Item = (props) => {
@@ -8,11 +8,9 @@ const Item = (props) => {
       <Img>
         <img src={props.data.foto} alt="foto" width={200} />
       </Img>
-      <Button2>
-        <Link to={process.env.PUBLIC_URL + `/item/${props.data.id}`}>
-          Ver más
-        </Link>
-      </Button2>
+      <Link to={process.env.PUBLIC_URL + `/item/${props.data.id}`}>
+        <Button> Ver más</Button>
+      </Link>
     </ItemStyle>
   );
 };

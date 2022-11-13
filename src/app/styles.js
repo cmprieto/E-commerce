@@ -128,7 +128,7 @@ export const Button = styled.button`
   font-size: 0.8rem;
   border: 1px solid black;
   cursor: pointer;
-  margin: 0;
+  margin: 0.5rem;
   padding: 0;
   width: 8rem;
   height: 2rem;
@@ -179,47 +179,35 @@ export const ItemStyle = styled.div`
   flex-direction: column;
   border-radius: 5px;
   justify-content: center;
-  align-content: center;
+  align-items: center;
 `;
 
-export const Button2 = styled.button`
-  background-color: tranparent;
-  color: #4682b4;
-  font-size: 0.8rem;
-  border: 0;
-  border-bottom: 0.5px solid grey;
-  cursor: pointer;
-  width: 8rem;
-  height: 3rem;
-  border-radius: 5px;
-  align-self: center;
-  &:hover {
-    background-color: #f0f0f0;
-  }
-  &:active {
-    border: 2px solid black;
-  }
-`;
 export const Img = styled.div`
   &:hover {
     opacity: 0.5;
   }
 `;
 
+export const UL = styled.ul`
+  margin: 0;
+  padding: 0;
+`;
 export const ItemDetailContainerStyle = styled.div`
   margin: 2rem;
   background-color: white;
   display: flex;
   flex-wrap: wrap;
-  align-content: flex-start;
+  align-items: center;
   justify-content: center;
 `;
 
 export const ItemDetailStyle = styled.div`
   margin: 2rem;
   padding: 2rem;
-  justify-content: flex-start;
-  flex-direction: row;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
   background-color: #f0f0f0;
   border: 1px solid black;
 `;

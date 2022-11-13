@@ -10,8 +10,8 @@ import {
   P,
 } from "../app/styles";
 
-const ItemCount = () => {
-  const [numberItems, setNumberItems] = useState(0);
+const ItemCount = ({ datosqueVienendelHijo }) => {
+  const [numberItems, setNumberItems] = useState(1);
   const [stock, setStock] = useState(24);
 
   //ONCHANGE
@@ -47,6 +47,7 @@ const ItemCount = () => {
     let newStock = stock - numberItems;
     console.log(`datos enviados ${numberItems}`);
     numberItems > stock ? alert("no hay sufiente stock") : setStock(newStock);
+    console.log(e);
   };
 
   return (
@@ -65,7 +66,7 @@ const ItemCount = () => {
           <Btn2 onClick={upValue}>+</Btn2>
         </Contador>
         {numberItems > stock && <P>stock: {stock}</P>}
-        <Button type="submit" value="Submit">
+        <Button type="submit" onClick={() => datosqueVienendelHijo(false)}>
           Agregar al carrito
         </Button>
       </Form>

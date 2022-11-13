@@ -19,7 +19,7 @@ const Navbar = () => {
           <NavLink to={process.env.PUBLIC_URL + "/category/fotografia"}>
             <Btn>FOTOGRAFIAS</Btn>
           </NavLink>
-          <NavLink to={process.env.PUBLIC_URL + "/category/libros"}>
+          <NavLink to={process.env.PUBLIC_URL + "/category/fotolibros"}>
             <Btn>FOTOLIBROS</Btn>
           </NavLink>
         </Menu>
