@@ -227,16 +227,23 @@ export const ItemDetailStyle = styled.div`
   border: 1px solid black;
 `;
 
-export const ContainerCart = styled.div`
+export const ContainerCartStyle = styled.div`
+margin:2rem auto;
+padding:2rem; 
+`;
+
+
+export const ContainerItemCart = styled.div`
 background-color: #fcf8e8;
 border-bottom: 2px solid black;
 margin:1rem;
 display:flex;
 flex-direction: row;
 justify-content: space-around;
-flex-wrap: nowrap;
+flex-wrap: wrap;
 align-items: center;
-/* max-width:70%; */
+
+border-radius: 5px;
   ${mobile} {
     width: 100%;
     flex-direction: column;

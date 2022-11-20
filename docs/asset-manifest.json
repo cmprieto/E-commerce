@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/e-commerce/static/css/main.4fe5d2f8.css",
-    "main.js": "/e-commerce/static/js/main.822aeab9.js",
+    "main.js": "/e-commerce/static/js/main.9e8eef8c.js",
     "static/media/ny1.jpg": "/e-commerce/static/media/ny1.0af21ea8cb4797555830.jpg",
     "static/media/ny3.jpg": "/e-commerce/static/media/ny3.9c3ea967b1f7132445b9.jpg",
     "static/media/ny2.jpg": "/e-commerce/static/media/ny2.64659b3b3be75debe8c9.jpg",
@@ -15,10 +15,10 @@
     "static/media/coderhouse-logo.jpg": "/e-commerce/static/media/coderhouse-logo.af15be142f396535deca.jpg",
     "index.html": "/e-commerce/index.html",
     "main.4fe5d2f8.css.map": "/e-commerce/static/css/main.4fe5d2f8.css.map",
-    "main.822aeab9.js.map": "/e-commerce/static/js/main.822aeab9.js.map"
+    "main.9e8eef8c.js.map": "/e-commerce/static/js/main.9e8eef8c.js.map"
   },
   "entrypoints": [
     "static/css/main.4fe5d2f8.css",
-    "static/js/main.822aeab9.js"
+    "static/js/main.9e8eef8c.js"
   ]
 }
