@@ -4,15 +4,15 @@ import {
   Btn2,
   Contador,
   Input,
-  Label,
   Button,
   Form,
   P,
 } from "../app/styles";
 
-const ItemCount = ({ datosqueVienendelHijo }) => {
+const ItemCount = ({ datosqueVienendelHijo, onAdd }) => {
   const [numberItems, setNumberItems] = useState(1);
   const [stock, setStock] = useState(24);
+  /* const [state, setState] = CartContext(); */
 
   //ONCHANGE
   const handleItemCount = (e) => {
@@ -46,19 +46,18 @@ const ItemCount = ({ datosqueVienendelHijo }) => {
     e.preventDefault();
     let newStock = stock - numberItems;
     console.log(`datos enviados ${numberItems}`);
-    numberItems > stock ? alert("no hay sufiente stock") : setStock(newStock);
-    console.log(e);
+    numberItems > stock ? alert("no hay suficiente stock") : setStock(newStock);
+    datosqueVienendelHijo(false);
+    onAdd(numberItems);
   };
 
   return (
     <FormGroup>
       <Form onSubmit={enviarDatos}>
-        {/* <Label>Fotografía</Label> */}
         <Contador>
           <Btn2 onClick={downValue}>-</Btn2>
           <Input
             type="text"
-            /* pattern="[0-9]" */
             value={numberItems}
             name="itemnumber"
             onChange={handleItemCount}
@@ -66,9 +65,7 @@ const ItemCount = ({ datosqueVienendelHijo }) => {
           <Btn2 onClick={upValue}>+</Btn2>
         </Contador>
         {numberItems > stock && <P>stock: {stock}</P>}
-        <Button type="submit" onClick={() => datosqueVienendelHijo(false)}>
-          Agregar al carrito
-        </Button>
+        <Button type="submit">Agregar al carrito</Button>
       </Form>
     </FormGroup>
   );

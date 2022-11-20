@@ -1,8 +1,7 @@
 import React from "react";
 import { Btn, Menu, NavBar } from "../app/styles";
 import foto from "../assets/img/coderhouse-logo.jpg";
-
-import CardWidget from "./CardWidget";
+import CartWidget from "./CartWidget";
 import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
@@ -23,8 +22,8 @@ const Navbar = () => {
             <Btn>FOTOLIBROS</Btn>
           </NavLink>
         </Menu>
-        <Link to={process.env.PUBLIC_URL + "/cart"}>
-          <CardWidget />
+        <Link to={process.env.PUBLIC_URL + "/cart"} style={{ textDecoration: 'none' }}> {/* elimino underline */}
+          <CartWidget />
         </Link>
       </NavBar>
     </div>

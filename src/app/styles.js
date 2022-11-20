@@ -43,6 +43,21 @@ export const Menu = styled.div`
     align-items: center;
   }
 `;
+
+
+export const CartWidgetStyle = styled.div`
+ display: flex;
+ flex-direction: row;
+ flex-wrap: nowrap;
+ align-items: center;
+ justify-content: space-between;
+  &:hover {
+    border: 1px solid #f0f0f0;
+  }
+    p{
+      color:#f0f0f0;
+    } 
+`;
 export const Btn = styled.button`
   width: 8rem;
   height: 3rem;
@@ -210,4 +225,35 @@ export const ItemDetailStyle = styled.div`
   justify-content: flex-end;
   background-color: #f0f0f0;
   border: 1px solid black;
+`;
+
+export const ContainerCart = styled.div`
+background-color: #fcf8e8;
+border-bottom: 2px solid black;
+margin:1rem;
+display:flex;
+flex-direction: row;
+justify-content: space-around;
+flex-wrap: nowrap;
+align-items: center;
+/* max-width:70%; */
+  ${mobile} {
+    width: 100%;
+    flex-direction: column;
+  }
+`;
+
+
+export const P2 = styled.p`
+  color: #7b241c;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items:center;
+    ${mobile} {
+    width: 100%;
+    flex-direction: column;
+  }
+
 `;
