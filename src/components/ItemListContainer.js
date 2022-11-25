@@ -2,17 +2,20 @@ import React from "react";
 import { Container } from "../app/styles";
 import ItemList from "./ItemList";
 import { useEffect, useState } from "react";
-import getProducts from "../services/products";
+// import getProducts from "../services/products";
+import { getItems } from '../app/api';
 
 const ItemListContainer = ({ saludo, datosFiltrados }) => {
   //desestructurado
   const [items, setItems] = useState([]);
 
+
   useEffect(() => {
-    getProducts().then((data) => {
-      setItems(data);
-    });
+    getItems().then((data) => setItems(data));    // CONEXION CON BD FIRESTORE
+    /*   getProducts().then((data) => { setItems(data); });*/
   }, []);
+
+  console.log('datosFirebase', items);
 
   return (
     <Container>
@@ -22,7 +25,6 @@ const ItemListContainer = ({ saludo, datosFiltrados }) => {
       ) : (
         <ItemList valorQuePaso={items} />
       )}
-      {/* <ItemList valorQuePaso={datosFiltrados} /> */}
     </Container>
   );
 };

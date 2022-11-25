@@ -1,7 +1,8 @@
 import ItemListContainer from "../components/ItemListContainer";
 
+
 const Home = () => {
-  const text = "Un hogar para la fotografía";
+  const text = "Fotografías y fotolibros";
 
   return (
     <div>

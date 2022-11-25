@@ -9,7 +9,7 @@ const getProducts = () => {
   });
 
   task.then((result) => {
-    console.log(result);
+    console.log('result getProducts', result);
   });
   return task;
 };
