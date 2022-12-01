@@ -26,7 +26,7 @@ const ItemDetail = () => {
     // si se cumple la condicion en cartcontext de añadir elemento, añado todo esto al estado global.
   }
 
-  console.log('desiredProduct', desiredProduct);
+
 
   return (
     <ItemDetailStyle>

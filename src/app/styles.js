@@ -276,7 +276,12 @@ export const TextItemCart = styled.div`
 display:flex;
 flex-direction: column;
 align-items: flex-start;
-width: 8rem auto;
+width: 9rem ;
+${mobile} {
+    width: 100%;
+    flex-direction: column;
+      align-items:flex-end;
+  }
 `;
 
 export const P2 = styled.p`

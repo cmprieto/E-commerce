@@ -14,8 +14,8 @@ const ItemCart = ({ product }) => {
                 <Icon2 src={xbutton} alt="logo" onClick={() => deleteItem(product.id)} />
                 <img src={product.foto} alt="foto" width={180} ></img>
                 <TextItemCart>
-                    <P2Bold>título: {product.title}</P2Bold>
-                    <P2Bold> descripción: {product.description}</P2Bold>
+                    <P2Bold>{product.title}</P2Bold>
+                    <P2Bold>{product.description}</P2Bold>
                 </TextItemCart>
             </InfoItemCart>
             <P2>cantidad: {product.cantidad}</P2>

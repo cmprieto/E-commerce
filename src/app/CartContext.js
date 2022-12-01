@@ -11,6 +11,7 @@ const Provider = ({ children }) => {
   const [state, setState] = useState([]);
   const [comprador, setComprador] = useState({ nombre: '', phone: '', mail: '' });
   const [numPedido, setNumPedido] = useState('');
+
   console.log('carrito: ', state);
 
   // HELPERS
