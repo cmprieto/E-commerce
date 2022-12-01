@@ -12,7 +12,6 @@ import {
 const ItemCount = ({ datosqueVienendelHijo, onAdd }) => {
   const [numberItems, setNumberItems] = useState(1);
   const [stock, setStock] = useState(24);
-  /* const [state, setState] = CartContext(); */
 
   //ONCHANGE
   const handleItemCount = (e) => {

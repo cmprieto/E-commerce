@@ -62,8 +62,6 @@ export const Btn = styled.button`
   width: 8rem;
   height: 3rem;
   justify-content: space-around;
-  /*   width: 70px;
-  height: 35px; */
   border-radius: 5px;
   margin: 0.5em;
   background-color: white;
@@ -93,6 +91,12 @@ export const Container = styled.div`
 
 export const Icon = styled.img`
   width: 2rem;
+`;
+export const Icon2 = styled.img`
+  width: 20px;
+  &:hover {
+    opacity:0.5;
+  }
 `;
 
 // ITEM COUNT
@@ -207,6 +211,7 @@ export const UL = styled.ul`
   margin: 0;
   padding: 0;
 `;
+
 export const ItemDetailContainerStyle = styled.div`
   margin: 2rem;
   background-color: white;
@@ -230,19 +235,20 @@ export const ItemDetailStyle = styled.div`
 export const ContainerCartStyle = styled.div`
 margin:2rem auto;
 padding:2rem; 
+
 `;
 
 
 export const ContainerItemCart = styled.div`
-background-color: #fcf8e8;
-border-bottom: 2px solid black;
+//background-color: #fcf8e8;
+border-bottom: 1px solid black;
 margin:1rem;
 display:flex;
 flex-direction: row;
-justify-content: space-around;
+justify-content: space-between;
 flex-wrap: wrap;
 align-items: center;
-
+max-width: 80%;
 border-radius: 5px;
   ${mobile} {
     width: 100%;
@@ -250,17 +256,101 @@ border-radius: 5px;
   }
 `;
 
+export const InfoItemCart = styled.div`
+ display: flex;
+ flex-direction: row;
+ width:60%;
+ justify-content: space-evenly;
+ align-items: center;
+`;
+
+export const TextItemCart = styled.div`
+display:flex;
+flex-direction: column;
+align-items: flex-start;
+width: 8rem auto;
+`;
 
 export const P2 = styled.p`
   color: #7b241c;
-  font-size: 1rem;
+  font-size: 0.9rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items:center;
+  margin:0;
     ${mobile} {
     width: 100%;
     flex-direction: column;
   }
+`;
+export const P2Bold = styled(P2)`
+color: black;
+font-size: 1rem;
+`;
+export const FlexContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width:80%;
+  margin:1rem;
 
+`;
+export const ContainerShop = styled.div`
+  //background-color: #fcf8e8;
+  //border-top: 1px solid black;
+  margin:1rem;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+
+  border-radius: 5px;
+    ${mobile} {
+      width: 100%;
+      flex-direction: column;
+    }
+`;
+
+export const DivFlex = styled.div`
+  display: flex;
+  align-items: space-between;
+  flex-direction: column;
+
+`;
+
+
+export const FormClient = styled.div`
+//display: block;
+width: 300px;
+margin 10px auto;
+`;
+
+export const InputForm = styled.input`
+    padding: 0.5em;
+    color: #7b241c;
+    background: papayawhip;
+    border: none;
+    border-radius: 3px;
+    width: 100%;
+    margin-bottom: 0.5em;
+`;
+
+export const LabelForm = styled.label`
+    margin-bottom: 0.5em;
+    color: #7b241c;
+    display: block;
+`;
+
+export const Title = styled.h3`
+text-align: center;`;
+
+
+export const PedidoContainer = styled.div`
+background-color: #EFF5ED;
+color:#609946;
+text-align: center;
+border: 1px solid #609946;
+margin:2rem;
+font-size:1rem;
 `;

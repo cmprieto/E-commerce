@@ -1,12 +1,14 @@
-import { collection, getDocs, query, doc, getDoc, addDoc, deleteDoc, updateDoc, setDoc, where } from "firebase/firestore";
+import { collection, getDocs, query, doc, getDoc, addDoc, deleteDoc, updateDoc, setDoc, where, serverTimestamp } from "firebase/firestore";
 import { db } from './firebase';
 
+
 // CREATE
-export const createItem = async (obj) => {
-    const colRef = collection(db, 'productos');
-    const data = await addDoc(colRef, obj);
-    return data.id;
+export const createPedido = async (obj) => {
+    const colRef = collection(db, 'pedidos');
+    const data = await addDoc(colRef, obj).then((res) => alert(res.id));  // addDoc -> ID DE PEDIDO
+    return data;
 }
+//.then(({ id }) => pasarPedido(id));  // addDoc -> ID DE PEDIDO
 
 // UPDATE
 export const updateItem = async (id, obj) => {
@@ -18,7 +20,6 @@ export const updateItem = async (id, obj) => {
 export const getItems = async () => {
     const colRef = collection(db, 'productos');
     const result = await getDocs(query(colRef));
-
     return getArrayFromCollection(result);
 }
 
@@ -46,4 +47,8 @@ const getArrayFromCollection = (collection) => {
     return collection.docs.map(doc => {
         return { ...doc.data(), id: doc.id };
     });
+}
+
+export const updateTimestamp = () => {
+    return serverTimestamp();
 }
