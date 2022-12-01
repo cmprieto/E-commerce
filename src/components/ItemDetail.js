@@ -1,4 +1,4 @@
-import { ItemDetailStyle, Button, P, UL } from "../app/styles";
+import { ItemDetailStyle, Button, P, UL, PGreen } from '../app/styles';
 import ItemCount from "./ItemCount";
 import { useState, useEffect } from 'react';
 import { Link, useParams } from "react-router-dom";
@@ -17,7 +17,7 @@ const ItemDetail = () => {
 
   useEffect(() => {
     getItemById(userId.id).then((data) => setDesiredProduct(data, { id: userId.id }));
-  }, []);
+  }, [userId.id]);
 
 
   const addItemPedido = (c) => {
@@ -37,15 +37,15 @@ const ItemDetail = () => {
         <UL>
           <h2> {desiredProduct.title}</h2>
           <P>
-            {desiredProduct.description} -
+            {desiredProduct.description} :
             {desiredProduct.price} €
           </P>
-          {/* <h4>stock: {desiredProduct.stock}</h4> */}
+          <PGreen>stock: {desiredProduct.stock}</PGreen>
         </UL>
       </div>
       {
         showItemCount ? (
-          <ItemCount
+          <ItemCount stockTienda={desiredProduct.stock}
             datosqueVienendelHijo={(r) => setShowItemCount(r)}
             onAdd={(c) => addItemPedido(c)} />
         ) : (

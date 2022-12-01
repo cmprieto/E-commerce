@@ -9,9 +9,8 @@ import {
   P,
 } from "../app/styles";
 
-const ItemCount = ({ datosqueVienendelHijo, onAdd }) => {
+const ItemCount = ({ datosqueVienendelHijo, onAdd, stockTienda }) => {
   const [numberItems, setNumberItems] = useState(1);
-  const [stock, setStock] = useState(24);
 
   //ONCHANGE
   const handleItemCount = (e) => {
@@ -43,11 +42,14 @@ const ItemCount = ({ datosqueVienendelHijo, onAdd }) => {
 
   const enviarDatos = (e) => {
     e.preventDefault();
-    let newStock = stock - numberItems;
     console.log(`datos enviados ${numberItems}`);
-    numberItems > stock ? alert("no hay suficiente stock") : setStock(newStock);
-    datosqueVienendelHijo(false);
-    onAdd(numberItems);
+    if (numberItems > stockTienda) {
+      alert("no hay suficiente stock");
+    }
+    else if (numberItems <= stockTienda) {
+      datosqueVienendelHijo(false);
+      onAdd(numberItems);
+    }
   };
 
   return (
@@ -63,7 +65,7 @@ const ItemCount = ({ datosqueVienendelHijo, onAdd }) => {
           />
           <Btn2 onClick={upValue}>+</Btn2>
         </Contador>
-        {numberItems > stock && <P>stock: {stock}</P>}
+        {numberItems > stockTienda && <P>stock: {stockTienda}</P>}
         <Button type="submit">Agregar al carrito</Button>
       </Form>
     </FormGroup>

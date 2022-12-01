@@ -1,12 +1,12 @@
 import { useCartContext } from '../app/CartContext';
-import { PedidoContainer } from '../app/styles';
+import { PedidoContainer, Button } from '../app/styles';
 
 const PurchaseDetail = () => {
-    const { numPedido, removeCart, finalizarCompra } = useCartContext();
+    const { numPedido, finalizarCompra } = useCartContext();
     return (
         <PedidoContainer>
             <p>Tu número de pedido es: {numPedido}</p>
-            <button type="button" onClick={finalizarCompra}>Resetear pedido</button>
+            <Button type="button" onClick={finalizarCompra}>Salir de la sesión</Button>
         </PedidoContainer>
     )
 }

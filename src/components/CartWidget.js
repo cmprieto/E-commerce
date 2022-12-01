@@ -10,8 +10,6 @@ const CartWidget = () => {
     <CartWidgetStyle>
       {totalProducts() !== 0 && <p>{totalProducts()}</p>}
       <Icon src={carritoColor} alt="logo" />
-      {/* corrección: profe: mejor aplicar estilos en styled components e importar img */}
-      {/*  <img src={carrito} alt="logo" style={{ width: "2rem" }} /> */}
     </CartWidgetStyle>
   );
 };

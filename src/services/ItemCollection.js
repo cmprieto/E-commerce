@@ -8,7 +8,6 @@ const ItemCollection = () => {
         getItems().then(data => setCollection(data))
     }, []);
 
-
     return (
         <div>
             {collection.map(collection => <p>{collection.id} - {collection.title}</p>)}

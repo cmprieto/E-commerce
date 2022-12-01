@@ -180,6 +180,11 @@ export const P = styled.p`
   font-size: 1rem;
 `;
 
+export const PGreen = styled(P)`
+    color: green;
+    font-size:0.9rem;
+    `
+
 //
 export const ItemListStyle = styled.div`
   margin: 2rem auto;
@@ -240,12 +245,11 @@ padding:2rem;
 
 
 export const ContainerItemCart = styled.div`
-//background-color: #fcf8e8;
-border-bottom: 1px solid black;
-margin:1rem;
 display:flex;
+border-bottom: 1px solid grey;
+margin:1rem;
 flex-direction: row;
-justify-content: space-between;
+justify-content: space-evenly;
 flex-wrap: wrap;
 align-items: center;
 max-width: 80%;
@@ -259,9 +263,13 @@ border-radius: 5px;
 export const InfoItemCart = styled.div`
  display: flex;
  flex-direction: row;
- width:60%;
- justify-content: space-evenly;
+ min-width: 60%;
+ justify-content: space-between;
  align-items: center;
+ ${mobile} {
+    min-width: 100%;
+    justify-content: space-evenly;
+  }
 `;
 
 export const TextItemCart = styled.div`
@@ -282,6 +290,7 @@ export const P2 = styled.p`
     ${mobile} {
     width: 100%;
     flex-direction: column;
+      align-items:flex-end;
   }
 `;
 export const P2Bold = styled(P2)`

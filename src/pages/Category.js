@@ -1,7 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import ItemListContainer from "../components/ItemListContainer";
-//import data from "../assets/data";
 import { useEffect, useState } from "react";
 import { getItemsByCondition } from '../app/api';
 
@@ -11,10 +10,6 @@ const Category = () => {
 
   useEffect(() => {
     getItemsByCondition(id).then((datas) => setItems2(datas));    // OBTENCION DE FILTRADO DE DATOS DE FIRESTORE
-
-    /* filtrado = data.filter((categoria) => categoria.category === id); */
-    /*   setItems2(filtrado); */
-
   }, [id]);
 
   return (

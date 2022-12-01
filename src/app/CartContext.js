@@ -16,9 +16,8 @@ const Provider = ({ children }) => {
   // HELPERS
   const addItem = (item, newQuantity) => {
     const newCart = state.filter(prod => prod.id !== item.id);
-    newCart.push({ ...item, cantidad: newQuantity }); // NO ME DISCRIMINA LOS REPETIDOS
+    newCart.push({ ...item, cantidad: newQuantity });
     setState(newCart);
-    /*   setState([...state, { ...item, cantidad: newQuantity }]); */
   };
 
   const removeCart = () => setState([]);
@@ -28,9 +27,6 @@ const Provider = ({ children }) => {
     setNumPedido('');
   }
 
-  /*   const isInCart = (id) => {
-      return Cart.find(product => product.id === id) ? true : false;
-    } */
 
   const deleteItem = (id) => {
     setState(state.filter(product => product.id !== id));
@@ -54,7 +50,6 @@ const Provider = ({ children }) => {
     const colRef = collection(db, 'pedidos');
     addDoc(colRef, pedido).then((res) => setNumPedido(res.id));   // addDoc -> ID DE PEDIDO
     // RESETEO CARRITO
-    /*  setState([]); */
     setComprador({ nombre: '', phone: '', mail: '' });
   }
 

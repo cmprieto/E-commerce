@@ -8,7 +8,6 @@ export const createPedido = async (obj) => {
     const data = await addDoc(colRef, obj).then((res) => alert(res.id));  // addDoc -> ID DE PEDIDO
     return data;
 }
-//.then(({ id }) => pasarPedido(id));  // addDoc -> ID DE PEDIDO
 
 // UPDATE
 export const updateItem = async (id, obj) => {

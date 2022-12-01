@@ -2,7 +2,6 @@ import React from "react";
 import { Container } from "../app/styles";
 import ItemList from "./ItemList";
 import { useEffect, useState } from "react";
-// import getProducts from "../services/products";
 import { getItems } from '../app/api';
 
 const ItemListContainer = ({ saludo, datosFiltrados }) => {
@@ -12,7 +11,6 @@ const ItemListContainer = ({ saludo, datosFiltrados }) => {
 
   useEffect(() => {
     getItems().then((data) => setItems(data));    // CONEXION CON BD FIRESTORE
-    /*   getProducts().then((data) => { setItems(data); });*/
   }, []);
 
   console.log('datosFirebase', items);

@@ -34,8 +34,7 @@ const Cart = () => {
           <ClientForm />
         </div>
       }
-
-      {numPedido !== 0 && <PurchaseDetail />}
+      {numPedido !== '' && <PurchaseDetail />}
 
     </ContainerCartStyle >
   );

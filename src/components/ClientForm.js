@@ -5,13 +5,6 @@ import { useCartContext } from "../app/CartContext";
 const ClientForm = () => {
     const { comprador, setComprador, terminarCompra, state } = useCartContext();
 
-    /*     const handleSubmit = (e) => {
-            e.preventDefault();
-            /* setCliente(nombre: clientName, telefono: phoneName, mail: mailName); */
-    /*   setComprador({ nombre: nombre, phone: phone, mail: mail });
-       console.log('comprador', comprador);
-       console.log(e.target.elements.email.value);
-   } */
     const hacerPedido = () => {
         if (comprador.nombre !== '' && comprador.phone !== '' && comprador.mail !== '') {
             terminarCompra();
