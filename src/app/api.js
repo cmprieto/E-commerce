@@ -1,4 +1,4 @@
-import { collection, getDocs, query, doc, getDoc, addDoc, deleteDoc, updateDoc, setDoc, where, serverTimestamp } from "firebase/firestore";
+import { collection, getDocs, query, doc, getDoc, addDoc, deleteDoc, updateDoc, setDoc, where } from "firebase/firestore";
 import { db } from './firebase';
 
 
@@ -11,7 +11,7 @@ export const createPedido = async (obj) => {
 
 // UPDATE
 export const updateItem = async (id, obj) => {
-    const colRef = collection(db, 'productos');
+    const colRef = collection(db, 'pedidos');
     await updateDoc(doc(colRef, id), obj)
 }
 
@@ -22,12 +22,37 @@ export const getItems = async () => {
     return getArrayFromCollection(result);
 }
 
+
 // READ WITH WHERE
 // Tener en cuenta que el tipo de dato de la condición debe coincidir con el tipo de dato que hay en Firebase o no obtendré un dato de respuesta
 export const getItemsByCondition = async (value) => {
     const colRef = collection(db, 'productos');
     const result = await getDocs(query(colRef, where('category', '==', value)));
     return getArrayFromCollection(result);
+}
+export const getItemsById = async (value) => {
+    const colRef = collection(db, 'pedidos');
+    const result = await getDocs(query(colRef, where('id', '==', value)));
+    return getArrayFromCollection(result);
+}
+
+
+export const getItemsByPedido = async (id) => {
+    const colRef = collection(db, 'pedidos');
+    const result = await getDocs(query(colRef, where('id', '==', id)));
+    console.log('eeeeeeeeeeeeeeeeID', id)
+    console.log('result', result)
+    return getArrayFromCollection(result);
+}
+
+export const getPedidoById = async (id) => {        // OBTIENE CESTA COMPRA POR ID DE COLECCCION
+    const colRef = collection(db, 'pedidos');
+    /*  console.log('pedidos', db); */
+    const IDStr = id.toString();
+    const result = await getDoc(doc(colRef, IDStr));
+    console.log('eeeeeeeeeeeeeeeeID', id)
+    /* console.log('result', result) */
+    return result.data();
 }
 
 export const getItemById = async (id) => {
@@ -42,12 +67,10 @@ export const deleteItem = async (id) => {
     await deleteDoc(doc(colRef, id));
 }
 
-const getArrayFromCollection = (collection) => {
+export const getArrayFromCollection = (collection) => {
     return collection.docs.map(doc => {
         return { ...doc.data(), id: doc.id };
     });
 }
 
-export const updateTimestamp = () => {
-    return serverTimestamp();
-}
+

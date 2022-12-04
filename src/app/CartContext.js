@@ -1,6 +1,5 @@
 import { createContext, useContext, useState } from "react";
-import { updateTimestamp } from './api';
-import { collection, addDoc } from 'firebase/firestore';
+import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from './firebase';
 
 export const AppContext = createContext();
@@ -41,19 +40,23 @@ const Provider = ({ children }) => {
     state.reduce((acumulador, productoActual) => acumulador + productoActual.cantidad, 0)
   );
 
+
   const terminarCompra = () => {
     const precioTotal = totalPrice();
     const cliente = comprador;
-    const pedido = { pedido: state, cliente, precioTotal, date: updateTimestamp() }
+    const pedido = {
+      pedido: state, cliente, precioTotal, date: serverTimestamp()
+    }
     console.log('pedido', pedido);
 
     // ENVIA DATOS A FIRESTORE
     const colRef = collection(db, 'pedidos');
     addDoc(colRef, pedido).then((res) => setNumPedido(res.id));   // addDoc -> ID DE PEDIDO
-    // RESETEO CARRITO
-    setComprador({ nombre: '', phone: '', mail: '' });
-  }
 
+    /* // RESETEO CARRITO
+    setComprador({ nombre: '', phone: '', mail: '' });
+   */
+  }
   return (
     <AppContext.Provider
       value={{ state, setState, addItem, removeCart, deleteItem, totalPrice, totalProducts, terminarCompra, comprador, setComprador, numPedido, setNumPedido, finalizarCompra }}>

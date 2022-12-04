@@ -5,7 +5,7 @@ import { useCartContext } from "../app/CartContext";
 const ClientForm = () => {
     const { comprador, setComprador, terminarCompra, state } = useCartContext();
 
-    const hacerPedido = () => {
+    const hacerPedido = ({ props }) => {
         if (comprador.nombre !== '' && comprador.phone !== '' && comprador.mail !== '') {
             terminarCompra();
         }

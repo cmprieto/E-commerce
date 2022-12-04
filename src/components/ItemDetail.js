@@ -17,6 +17,7 @@ const ItemDetail = () => {
 
   useEffect(() => {
     getItemById(userId.id).then((data) => setDesiredProduct(data, { id: userId.id }));
+
   }, [userId.id]);
 
 
@@ -26,6 +27,7 @@ const ItemDetail = () => {
     // si se cumple la condicion en cartcontext de añadir elemento, añado todo esto al estado global.
   }
 
+  console.log('desiredProducto', desiredProduct);
 
 
   return (

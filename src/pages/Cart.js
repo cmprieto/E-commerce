@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import { useCartContext } from "../app/CartContext";
 import { P, ContainerCartStyle, Button, ContainerShop, FlexContainer } from '../app/styles';
 import ItemCart from "../components/ItemCart";
@@ -8,7 +9,6 @@ import PurchaseDetail from "../components/PurchaseDetail";
 
 const Cart = () => {
   const { state, removeCart, totalPrice, numPedido } = useCartContext();
-
   return (
     <ContainerCartStyle>
       {state.length === 0 && <Link to={process.env.PUBLIC_URL} style={{ textDecoration: 'none', textAlign: "center" }}><h1>Quiero ver el catálogo</h1></Link>}

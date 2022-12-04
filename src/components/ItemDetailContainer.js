@@ -9,7 +9,7 @@ const ItemDetailContainer = () => {
   return (
     <Fragment>
       <ItemDetailContainerStyle>
-        <ItemDetail ></ItemDetail>
+        <ItemDetail />
       </ItemDetailContainerStyle>
     </Fragment>
   );

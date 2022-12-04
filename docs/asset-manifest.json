@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/e-commerce/static/css/main.4fe5d2f8.css",
-    "main.js": "/e-commerce/static/js/main.f16321f7.js",
+    "main.js": "/e-commerce/static/js/main.51ac549a.js",
     "static/media/PTN77F.ttf": "/e-commerce/static/media/PTN77F.b4852e505e9df3ccb0f7.ttf",
     "static/media/coderhouse-logo.jpg": "/e-commerce/static/media/coderhouse-logo.af15be142f396535deca.jpg",
     "static/media/xbutton.png": "/e-commerce/static/media/xbutton.5cc943d27eb3ed685271.png",
     "index.html": "/e-commerce/index.html",
     "main.4fe5d2f8.css.map": "/e-commerce/static/css/main.4fe5d2f8.css.map",
-    "main.f16321f7.js.map": "/e-commerce/static/js/main.f16321f7.js.map"
+    "main.51ac549a.js.map": "/e-commerce/static/js/main.51ac549a.js.map"
   },
   "entrypoints": [
     "static/css/main.4fe5d2f8.css",
-    "static/js/main.f16321f7.js"
+    "static/js/main.51ac549a.js"
   ]
 }

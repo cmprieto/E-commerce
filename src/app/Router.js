@@ -4,6 +4,7 @@ import Layout from "./Layout";
 import Item from "../pages/Item";
 import Category from "../pages/Category";
 import Cart from "../pages/Cart";
+import Checkout from "../pages/Checkout";
 
 const Router = () => (
   <BrowserRouter>
@@ -16,6 +17,7 @@ const Router = () => (
           element={<Category />}
         />
         <Route path={process.env.PUBLIC_URL + "/cart/"} element={<Cart />} />
+        <Route path={process.env.PUBLIC_URL + "/checkout/"} element={<Checkout />} />
         <Route path="*" element={<div>404</div>} />
       </Route>
     </Routes>
