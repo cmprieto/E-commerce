@@ -365,6 +365,21 @@ background-color: #EFF5ED;
 color:#609946;
 text-align: center;
 border: 1px solid #609946;
-margin:2rem;
+margin:3rem;
 font-size:1rem;
+`;
+
+export const CatalogoContainer = styled.div`
+background-color: #f1b009;
+color: white;
+text-align: center;
+border: 1px solid black;
+margin:3rem;
+font-size:1rem;
+&:hover {
+    opacity: 0.5;
+  }
+  &:visited{
+    color:red;
+  }
 `;

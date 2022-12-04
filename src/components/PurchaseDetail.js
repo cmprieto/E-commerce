@@ -3,7 +3,7 @@ import { PedidoContainer, Button } from '../app/styles';
 import { Link } from 'react-router-dom';
 
 const PurchaseDetail = () => {
-    const { numPedido, finalizarCompra, comprador } = useCartContext();
+    const { numPedido, comprador } = useCartContext();
     return (
         <PedidoContainer>
             <Link to={process.env.PUBLIC_URL + "/checkout"}><Button>VER DETALLES PEDIDO</Button></Link>

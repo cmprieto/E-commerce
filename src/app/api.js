@@ -40,18 +40,13 @@ export const getItemsById = async (value) => {
 export const getItemsByPedido = async (id) => {
     const colRef = collection(db, 'pedidos');
     const result = await getDocs(query(colRef, where('id', '==', id)));
-    console.log('eeeeeeeeeeeeeeeeID', id)
-    console.log('result', result)
     return getArrayFromCollection(result);
 }
 
 export const getPedidoById = async (id) => {        // OBTIENE CESTA COMPRA POR ID DE COLECCCION
     const colRef = collection(db, 'pedidos');
-    /*  console.log('pedidos', db); */
     const IDStr = id.toString();
     const result = await getDoc(doc(colRef, IDStr));
-    console.log('eeeeeeeeeeeeeeeeID', id)
-    /* console.log('result', result) */
     return result.data();
 }
 

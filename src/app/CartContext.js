@@ -25,6 +25,8 @@ const Provider = ({ children }) => {
   const finalizarCompra = () => {
     removeCart();
     setNumPedido('');
+    setState([]);
+    setComprador({ nombre: '', phone: '', mail: '' });
   }
 
 
